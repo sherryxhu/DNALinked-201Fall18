@@ -130,7 +130,7 @@ public class LinkStrand implements IDnaStrand{
 	@Override
 	public char charAt(int index) {
 		if(index>mySize || index<0) {
-			throw new IndexOutOfBoundsException();
+			throw new IndexOutOfBoundsException(index+"is not a valid index");
 		}
 		if(myIndex>index) {
 			myIndex = 0;
