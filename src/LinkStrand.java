@@ -51,6 +51,7 @@ public class LinkStrand implements IDnaStrand{
 		myFirst = new Node(source);
 		myLast = myFirst;
 		mySize = source.length();
+		myAppends = 0;
 		myIndex = 0;
 		myLocalIndex = 0;
 		myCurrent = myFirst; 
@@ -109,7 +110,8 @@ public class LinkStrand implements IDnaStrand{
 			newNode.next = reversed.myFirst;
 			reversed.myFirst = newNode;
 		}
-		
+		reversed.mySize = mySize;
+		reversed.myAppends = myAppends; 
 		return reversed;
 	}
 
